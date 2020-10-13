@@ -3,7 +3,6 @@ import "../css/style.css";
 
 const apiKey = "18624204-8f07c9501328e2a8f9ff8c349";
 
-const baseUrl = "https://pixabay.com/api";
 
 export default {
   _query: "cat",
@@ -11,7 +10,7 @@ export default {
   perPage: 12,
 
   async fetchImages() {
-    let url = `${baseUrl}?image_type=photo&orientation=horizontal&q=${this._query}&page=${this.page}&per_page=12&key=${apiKey}`;
+    let url = `https://pixabay.com/api?image_type=photo&orientation=horizontal&q=${this._query}&page=${this.page}&per_page=12&key=${apiKey}`;
 
 
     try {

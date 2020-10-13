@@ -33,7 +33,10 @@ refs.input.addEventListener(
   }, 500));
 
 function renderApi() {
-  apiService.fetchImages().then((data) => RenderItems(data));
+  apiService.fetchImages().then((data) => {
+    console.log(data);
+    RenderItems(data);
+  });
 }
 
 const startheight = document.documentElement.offsetHeight;
